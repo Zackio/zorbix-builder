@@ -1,0 +1,63 @@
+/* ------------------------ */
+/*   Column
+/* ------------------------ */
+
+.zbx-nested-column,
+.zbx-column {
+  //background: #007197;
+  position: relative;
+  margin-bottom: 20px;
+  //overflow: hidden; // Messed up layout
+  @include clearfix();
+  float: left;
+  min-width: 146px;
+  padding: 0;
+margin: 36px -1px 20px 0;
+
+  @include builder-border;
+
+  #poststuff & > h2 {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #c5c5c5;
+    color: #3E3E3E;
+    left: 0;
+    width: 100%;
+    top: 0;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-weight: 400;
+    span {
+      font-weight: 100;
+      color: #7B7B7B;
+    }
+  }
+
+  &:hover .handle {
+    opacity: 1;
+  }
+
+  & > .handle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    @include center-in-square(39px);
+    opacity: 0;
+
+  }
+
+  & > .zbx-buttons {
+    position: absolute;
+    top: -32px;
+    right: -5px;
+  }
+
+  .zbx-drag-zone {
+    background: #fff;
+    padding: 10px;
+    clear: both;
+    min-height: 91px;
+  }
+
+}
+

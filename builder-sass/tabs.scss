@@ -1,0 +1,52 @@
+/* ------------------------ */
+/*   Tabs
+/* ------------------------ */
+
+.zbx-atts-form-wrap {
+  .content {
+    display: none;
+    background: none;
+    clear: both;
+    padding: 20px 20px 1px;
+
+    &:first-child {
+      display: block;
+    }
+  }
+
+  .tabs {
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    @extend %clearfix;
+  }
+
+  .trigger {
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    a {
+      text-decoration: none;
+      color: #444;
+    }
+  }
+
+
+}
+
+.tabs .trigger {
+  background: none;
+  float: left;
+  display: inline-block;
+  margin: 0 -1px 0 0; /* remove double border */
+}
+
+.tabs .trigger a {
+  padding-top: 8px;
+  border-bottom: none;
+}
+
+.tabs .trigger i {
+  font-size: 16px;
+  margin-top: 3px;
+}

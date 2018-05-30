@@ -1,0 +1,107 @@
+/* ------------------------ */
+/* Add Stuff
+/* For add shortcode and add template dialogs
+/* ------------------------ */
+
+.builder-modal,
+.zbx-add-stuff-popup {
+  @include full-screen-modal;
+  display: none;
+  z-index: 9999;
+  .inner {
+    background: #fff;
+    //padding: 30px;
+    margin: 60px auto;
+    max-width: 1000px;
+    position: relative;
+    @include clearfix;
+
+    #poststuff & > h2 {
+      background: #54A0FF;
+      padding: 20px 30px;
+      color: #fff;
+      display: block;
+      text-align: left;
+    }
+
+    .content {
+      padding: 30px 10px 20px;
+    }
+
+    .tabs {
+      @extend %clearfix;
+      padding: 15px 15px;
+      background-color: #f9f9f9;
+      a {
+        text-decoration: none;
+        padding: 5px;
+      }
+    }
+
+    .close {
+      position: absolute;
+      right: 10px;
+      top: 15px;
+      font-size: 30px;
+      color: #fff;
+      border: none;
+      width: auto;
+      height: auto;
+      line-height: 0;
+    }
+
+    .snippet-btn,
+    .page-btn,
+    .template-btn,
+    .zbx-add-element { // shortcode button
+      color: #000;
+      text-decoration: none;
+      border: 2px solid #eeeeee;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      display: block;
+      text-transform: uppercase;
+      padding: 10px 15px;
+      height: 68px;
+    }
+
+    .template-btn,
+    .snippet-btn {
+      height: auto;
+      img {
+        padding-top: 10px;
+        width: 100%;
+      }
+    }
+
+    .template-btn {
+      height: 228px;
+    }
+
+    .zbx-add-element {
+      padding: 10px 15px 10px 70px;
+      position: relative;
+      i {
+        @include center-in-square(60px);
+        color: white;
+        background: #54A0FF;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  //top: 50px;
+  //bottom: 50px;
+  //left: 50px;
+  //right: 50px;
+  //z-index: 9999;
+  //border: 2px solid gray;
+  //padding: 30px;
+  //display: none;
+}
+
+.builder-modal {
+  //display: block;
+}

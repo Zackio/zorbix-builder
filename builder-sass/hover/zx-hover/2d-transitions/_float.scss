@@ -1,0 +1,11 @@
+// Float
+@mixin float-item {
+	@include hacks();
+	@include prefixed(transition-duration, $mediumDuration);
+	@include prefixed(transition-property, transform);
+	@include prefixed(transition-timing-function, ease-out);
+}
+
+@mixin float-hover {
+	@include prefixed(transform, translateY(-8px));
+}

@@ -1,0 +1,103 @@
+/* ------------------------ */
+/*   Element
+/* ------------------------ */
+
+.zbx-element {
+  border: #007197;
+  background: #00b3ee;
+  background-color: $background-color;
+  @include builder-border;
+  margin-bottom: 10px;
+  position: relative;
+  clear: both;
+  float: left;
+  width: 100%;
+  height: 60px;
+/*   color: white; */
+  padding: 20px 10px 20px 70px;
+  padding: 11px 0 0 70px;
+
+
+@include break-md-min {
+  .col-md-1 &,
+  .col-md-2 &,
+  .col-lg-1 &
+  .col-lg-2 & {
+    text-align: center;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    h3 {
+      padding: 0;
+
+    }
+    .zbx-buttons {
+      padding: 0;
+      float: none;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 3px;
+      a {
+        float: none;  
+        display: inline-block;
+      }
+    }
+    i {
+      font-size: 14px;
+    }
+  }
+}
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 13px;
+    @include break-lg-min {
+      //padding: 5px 10px;
+    }
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    @include vertical-align-cell;
+  }
+
+  h4 {
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+  }
+
+  &:hover .zbx-buttons {
+    opacity: 1;
+  }
+
+  & > i {
+    // handel
+    @include center-in-square(60);
+    color: white;
+    background: #54A0FF;
+    float: left;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    &:hover:before {
+      content: "\f047";
+    }
+  }
+
+  .zbx-buttons {
+    @extend %clearfix;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+    position: absolute;
+    top: -1px;
+    right: 0;
+    @include break-lg-min {
+      float: right;
+    }
+  }
+
+}

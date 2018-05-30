@@ -1,0 +1,107 @@
+/* ===================================================== */
+/* Sections 											 */
+/* ===================================================== */
+
+$bg-dark: #373737;
+$bg-dark: #2B2B2B;
+$line-color: #f0f0f0;
+
+.container.narrow {
+  width: 950px;
+}
+.sect {
+
+  @include clearfix;
+
+  @include breakpoint(max-width $screen-md) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  // To match vc_row
+  margin-right: -15px;
+  margin-left: -15px;
+  &.vc_row-no-padding .wpb_column {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+    padding-top: 100px;
+  padding-bottom: 100px;
+  // overflow: hidden;
+
+  &.large {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    @include break-sm-max {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &.no-top-bottom-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &.short {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &.line-top {
+    border-top: 1px solid $line-color;
+  }
+
+  &.line-bottom {
+    border-bottom: 1px solid $line-color;
+  }
+}
+
+.sect .container {
+  position: relative;
+}
+
+.center-col-container {
+  text-align: center;
+}
+
+.center-col {
+  float: none;
+  margin: 0 auto;
+}
+
+.sect-inner {
+  background-color: white;
+  @include inner;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.bg-light-grey,
+.bg-light-gray {
+  // background-color: #F5F5F5;
+  background-color: #f9f9f9;
+}
+
+.bg-dark {
+  background-color: $bg-dark;
+
+  @include headings() {
+    color: inherit;
+  }
+  & p {
+    color: inherit;
+  }
+}
+
+/* Image Section */
+.bg-img {
+  background-size: cover;
+  background-position: center;
+}
+
+.page-section {
+  padding: 120px 0;
+}

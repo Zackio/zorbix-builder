@@ -1,0 +1,61 @@
+
+.btn.link {
+	@extend .btn;
+	@extend .btn-sm;
+	@extend .btn-dark;
+	//@extend .btn-very-rounded;
+}
+
+
+.zbx-buttons {
+	position: relative;
+	margin-right: 5px;
+	color: #444;
+
+	& > a {
+		background-color: $background-color;
+	border: 1px solid $brown-dark;
+		@include center-in-square(32);
+		float: right;
+		text-decoration: none;
+		margin-right: -1px;
+		text-align: center;
+				color: inherit;
+				font-weight:600;
+
+	}
+	i {
+		color: inherit;
+		font-size: 14x;
+	}
+}
+
+#zbx-builder-submit,
+#zbx-toggle-builder,
+#zbx-builder-cancel {
+	@extend .btn;
+	@extend .btn-very-rounded;
+	@extend .btn-sm;
+	margin-bottom: 20px;
+	margin-right: 10px;
+}
+
+#zbx-builder-submit,
+#zbx-toggle-builder {
+	@extend .btn-color;
+}
+
+#zbx-builder-cancel {
+	@extend .btn-dark;
+}
+
+#zbx-builder-submit,
+#zbx-builder-cancel {
+	float: right;
+	margin-right: 20px;
+}
+
+#zbx-builder-submit {
+	margin-right: 40px;
+}
+

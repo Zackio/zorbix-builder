@@ -1,0 +1,142 @@
+/* ===================================================== */
+/* > Forms
+/* ===================================================== */
+
+
+fieldset {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+textarea,
+select {
+  background: #fff;
+  border: none;
+  color: #aaa;
+  display: inline-block;
+  font: 13px HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 10px;
+  // margin: 0;
+  max-width: 100%;
+  outline: none;
+  padding: 5px 10px 5px;
+  width: 210px;
+
+  .white-text & {
+    background-color: rgba(255, 255, 255, .5);
+    color: #000;
+    &::-webkit-input-placeholder { /* WebKit browsers */
+      color: #000;
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #000;
+      opacity: 1;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: #000;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: #000;
+    }
+  }
+}
+
+input:invalid {
+  box-shadow: none;
+}
+
+/* Removes top shadow on ios*/
+input,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+textarea {
+  border: 1px solid #E9E9E9;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select {
+  padding: 0;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+  border: 1px solid #aaa;
+  box-sizing: content-box;
+  color: #444;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+}
+
+textarea {
+  min-height: 60px;
+}
+
+label,
+legend {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+select {
+  width: 220px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+label span,
+legend span {
+  font-size: 13px;
+  font-weight: 400;
+  color: #444;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+}
+
+input[type="checkbox"].onoffswitch-checkbox {
+  display: none;
+}
+
+.field-wrap {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  @include make-row;
+}
+
+.image_multi-wrap {
+  img {
+    width: 70px;
+    padding: 5px;
+  }
+}
+
+.field-wrap-editor {
+  .zbx-desc {
+    display: none;
+  }
+  .zbx-input {
+    //height: 500px;
+    width: 100%;
+  }
+}
+
+.checkbox-wrap {
+  margin-top: 10px;
+}

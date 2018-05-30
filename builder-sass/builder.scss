@@ -1,0 +1,105 @@
+// ------------------------
+// Builder
+// -----------------------
+@import 'settings';
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon.scss';
+//@import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss';
+@import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_mixins.scss';
+@import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables.scss';
+@import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/grid-framework.scss';
+@import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/grid.scss';
+@import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/grid.scss';
+// @import 'hover/effects';
+@import 'hover/_zx-hover';
+@import '../../sass/breakpoints';
+
+.builder-modal,
+#page-builder {
+  @import 'forms';
+}
+
+// http://breakpoint-sass.com/
+// @include breakpoint(max-width 1000px;)
+@import '../bower_components/compass-breakpoint/stylesheets/_breakpoint.scss';
+@import 'mixins';
+@import 'column';
+@import 'section';
+@import 'element';
+@import 'builder-buttons';
+@import '../../sass/buttons';
+@import 'tabs';
+@import 'add-stuff';
+@import 'toggles';
+@import "shortcode_edit_popup";
+
+
+
+.builder-modal,
+#page-builder {
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+}
+
+//#page-builder .inside h2 {
+//  padding-top: 0;
+//  margin: 0;
+//}
+
+.select2-container {
+  z-index: 99999;
+}
+
+.zorbix-builder-container {
+  background-color: #f5f5f5;
+  width: 100%;
+}
+
+.zorbix-builder-container ul {
+  width: 100%;
+}
+
+
+
+#page-builder {
+
+  .item-drop {
+    height: 50px;
+    background: gray;
+    width: 200px;
+    max-width: 100%;
+    float: left;
+    color: #fff;
+    padding: 15px;
+  }
+
+  .inside {
+    & > a {
+      background: none;
+      padding: 10px 10px 20px;
+      text-decoration: none;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+  }
+
+}
+
+.zbx-add-element,
+.zbx-add-element-open {
+  //display: inline-block;
+  //text-decoration: none;
+  //text-transform: uppercase;
+  //font-size: .8em;
+  //padding: 5px 10px;
+  color: #fff;
+
+  //margin: 0 10px 10px 0;
+  //background: palegreen;
+  //border: 2px solid #71ba71;
+}
+
+.zbx-drag-zone {
+  min-height: 70px;
+  @include clearfix();
+}

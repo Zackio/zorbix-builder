@@ -1,0 +1,82 @@
+/* ===================================================== */
+/* Top Bar
+/* ===================================================== */
+
+.top-bar {
+  background: #303030;
+  color: #fff;
+//  height: 50px;
+  & .container {
+    @include vertical-align-container;
+  }
+}
+
+.top-bar .info {
+  text-align: left;
+  float: left;
+  line-height: 50px;
+  height: 50px;
+  padding-right: 20px;
+
+  .menu-widget {
+    display: inline-block;
+    padding: 0 18px;
+  }
+
+  a {
+    color: #fff;
+  }
+  //	@include vertical-align;
+
+  & ul {
+    list-style: none;
+
+    & li {
+      float: right;
+      margin-left: 20px;
+    }
+  }
+
+  & .bullet_list {
+    margin-bottom: 0;
+
+    & ul {
+      margin-bottom: 0;
+    }
+
+    & i {
+      color: #7B7B7B;
+      float: left;
+    }
+
+    & li {
+      margin-left: 40px;
+      margin-bottom: 3px;
+    }
+
+  }
+}
+
+.top-bar .info-right {
+  float: right;
+  padding-left: 20px;
+  padding-right: 0;
+}
+
+.top-bar .social-icons {
+  float: right;
+
+  a {
+    margin: 0;
+  }
+  a i {
+    background: none;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
+.top-bar .social-icons li {
+  margin-bottom: 0;
+  width: 1;
+}

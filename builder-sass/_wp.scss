@@ -1,0 +1,97 @@
+.seperator {
+  clear: both;
+  .latest-posts & {
+    margin-bottom: 30px;
+  }
+  .clients & {
+    margin-bottom: 30px;
+  }
+  &.xs {
+    @include break-xs-max() {
+      display: none;
+    }
+  }
+ 
+  &.sm {
+    @include break-sm-max() {
+      display: none;
+    }
+  }
+  &.md {
+    @include break-md-max() {
+      display: none;
+    }
+  }
+ }
+
+
+.zorbix {
+  .theme-default .nivoSlider {
+    box-shadow: none;
+  }
+}
+
+/* Because inline columns don't divide quite right */
+.cols-centered .col-sm-3 {
+  margin-left: -2px;
+  margin-right: -2px;
+}
+
+.responsive-video,
+.post-video {
+  //  .wp-video, video.wp-video-shortcode, .mejs-container, .mejs-overlay.load {
+  //    width: 100% !important;
+  //  }
+  .wp-video,
+  video.wp-video-shortcode {
+    max-width: 100% !important;
+  }
+  video.wp-video-shortcode {
+    position: relative;
+  }
+  .mejs-mediaelement {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    outline: none;
+  }
+
+  .mejs-container {
+    outline: none;
+  }
+
+  .mejs-overlay-play {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .mejs-controls a:focus > .mejs-offscreen {
+    box-shadow: none;
+  }
+
+}
+
+video:focus {
+  outline: none;
+}
+
+.alignright {
+  float: right;
+  padding-left: 20px;
+}
+
+.alignleft {
+  float: left;
+  padding-right: 20px;
+}
+
+.aligncenter {
+  margin: 0 auto ;
+}
+

@@ -1,0 +1,118 @@
+@import 'settings';
+
+.fa-li {
+  top: 0.33em;
+}
+
+// $link-hover-color:
+
+// Default button colors
+$btn-default-color: #444;
+$btn-default-bg: rgba(0, 0, 0, 0);
+$btn-default-border: #ddd;
+
+// Button Primary
+$btn-primary-color: #444;
+$btn-primary-bg: #fff;
+$btn-primary-border: #fff;
+
+$headings-font-weight: 400;
+
+//== Pagination
+//
+//##
+
+// $pagination-color:                     $link-color ;
+$pagination-bg: #fff;
+$pagination-border: #ddd;
+
+// $pagination-hover-color:               $link-hover-color;
+$pagination-hover-bg: darken(#fff, 10);
+$pagination-hover-border: darken(#fff, 10);
+;
+
+$pagination-active-color: #fff;
+$pagination-active-bg: #444;
+$pagination-active-border: #444;
+
+// $pagination-disabled-color:            $gray-light;
+$pagination-disabled-bg: #fff;
+$pagination-disabled-border: #ddd;
+
+$pager-border-radius: 0;
+
+/* ===================================================== */
+/* Body Font
+/* ===================================================== */
+
+// Base color
+$gray-base: #444 !default;
+
+// Heading colors
+$headings-color: #444;
+
+// Body color
+$text-color: #909090;
+
+// body font size
+$font-size-base: 16px !default;
+// Line height
+$line-height-base: 1.7 !default;
+
+// Link Color:
+$brand-primary: #000;
+
+@import 'bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
+
+// Clear all columns
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  // padding-bottom: 1px;
+  @include clearfix();
+}
+
+.cols-centered {
+  text-align: center;
+}
+
+.cols-centered .col-xs-1, .cols-centered .col-sm-1, .cols-centered .col-md-1, .cols-centered .col-lg-1, .cols-centered .col-xs-2, .cols-centered .col-sm-2, .cols-centered .col-md-2, .cols-centered .col-lg-2, .cols-centered .col-xs-3, .cols-centered .col-sm-3, .cols-centered .col-md-3, .cols-centered .col-lg-3, .cols-centered .col-xs-4, .cols-centered .col-sm-4, .cols-centered .col-md-4, .cols-centered .col-lg-4, .cols-centered .col-xs-5, .cols-centered .col-sm-5, .cols-centered .col-md-5, .cols-centered .col-lg-5, .cols-centered .col-xs-6, .cols-centered .col-sm-6, .cols-centered .col-md-6, .cols-centered .col-lg-6, .cols-centered .col-xs-7, .cols-centered .col-sm-7, .cols-centered .col-md-7, .cols-centered .col-lg-7, .cols-centered .col-xs-8, .cols-centered .col-sm-8, .cols-centered .col-md-8, .cols-centered .col-lg-8, .cols-centered .col-xs-9, .cols-centered .col-sm-9, .cols-centered .col-md-9, .cols-centered .col-lg-9, .cols-centered .col-xs-10, .cols-centered .col-sm-10, .cols-centered .col-md-10, .cols-centered .col-lg-10, .cols-centered .col-xs-11, .cols-centered .col-sm-11, .cols-centered .col-md-11, .cols-centered .col-lg-11, .cols-centered .col-xs-12, .cols-centered .col-sm-12, .cols-centered .col-md-12, .cols-centered .col-lg-12 {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.bs-grid-example .col-xs-1, .bs-grid-example .col-sm-1, .bs-grid-example .col-md-1, .bs-grid-example .col-lg-1, .bs-grid-example .col-xs-2, .bs-grid-example .col-sm-2, .bs-grid-example .col-md-2, .bs-grid-example .col-lg-2, .bs-grid-example .col-xs-3, .bs-grid-example .col-sm-3, .bs-grid-example .col-md-3, .bs-grid-example .col-lg-3, .bs-grid-example .col-xs-4, .bs-grid-example .col-sm-4, .bs-grid-example .col-md-4, .bs-grid-example .col-lg-4, .bs-grid-example .col-xs-5, .bs-grid-example .col-sm-5, .bs-grid-example .col-md-5, .bs-grid-example .col-lg-5, .bs-grid-example .col-xs-6, .bs-grid-example .col-sm-6, .bs-grid-example .col-md-6, .bs-grid-example .col-lg-6, .bs-grid-example .col-xs-7, .bs-grid-example .col-sm-7, .bs-grid-example .col-md-7, .bs-grid-example .col-lg-7, .bs-grid-example .col-xs-8, .bs-grid-example .col-sm-8, .bs-grid-example .col-md-8, .bs-grid-example .col-lg-8, .bs-grid-example .col-xs-9, .bs-grid-example .col-sm-9, .bs-grid-example .col-md-9, .bs-grid-example .col-lg-9, .bs-grid-example .col-xs-10, .bs-grid-example .col-sm-10, .bs-grid-example .col-md-10, .bs-grid-example .col-lg-10, .bs-grid-example .col-xs-11, .bs-grid-example .col-sm-11, .bs-grid-example .col-md-11, .bs-grid-example .col-lg-11, .bs-grid-example .col-xs-12, .bs-grid-example .col-sm-12, .bs-grid-example .col-md-12, .bs-grid-example .col-lg-12 {
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.col {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+a:hover, a:focus {
+  // text-decoration: none;
+}
+
+// No gutters hack
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.no-gutters [class^="col-"],
+.no-gutters [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+hr {
+  border-color: #f0f0f0;
+  width: 100%;
+}
+

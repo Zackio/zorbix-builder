@@ -1,0 +1,352 @@
+// 
+// @include abVerticalCenter($height);
+// @include abHzCenter($width);
+// 
+
+// Usage: @extend %altfont;
+// 
+//
+// Usage
+//
+// &:before {
+// content: '\f053';
+//  @extend %fa;
+// }
+//
+
+
+%fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin white-text {
+  .white-text & {
+    color: #fff;
+  }
+}
+
+%row {
+  @include make-row();
+}
+
+%container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+@mixin standard-border {
+  border: 3px solid $brown-dark;
+}
+
+@mixin border( $width: $border-width, $color: $brown-dark) {
+
+  @if $width != '0' {
+    @if $width == none {
+      border: none;
+    } @else {
+      border: $width solid $color;
+    }
+  }
+}
+
+@mixin icon-shape {
+  svg {
+    position: absolute;
+    left: 10px;
+    top: -2px;
+    @include abHzCenter(68);
+  }
+}
+
+%altfont {
+  //	font-family: 'Crimson Text', serif;
+  font-family: 'Pacifico', cursive;
+}
+
+@mixin reset-list {
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+}
+
+%inner {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@mixin inner() {
+  @extend %inner;
+}
+
+@mixin remove-rounded() {
+  @include border-top-radius(0);
+  @include border-right-radius(0);
+  @include border-bottom-radius(0);
+  @include border-left-radius(0);
+}
+
+%clearfix {
+  @include clearfix();
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+$altTextColor: #AAAAAA;
+$heading-color: #444;
+$text-color: #AAA;
+$transTime: .5;
+
+$bg-dark: #373737;
+
+@mixin column() {
+  display: block;
+  float: left;
+}
+
+%one-half-full {
+  width: 49%;
+  @include column();
+}
+
+@mixin circle() {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+@function px($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number;
+  }
+
+  @return ($number)+px;
+}
+
+@mixin center-in-square($w) {
+  width: px($w);
+  height: px($w);
+  line-height: px($w);
+  text-align: center;
+}
+
+@mixin circle-icon-filled($w: 40) {
+  @include circle;
+  @include center-in-square( $w);
+  text-align: center;
+}
+
+@mixin circle-icon-outline( $size: 40px, $border-width: 2px, $color: $theme-color ) {
+  @include circle;
+  @include center-in-square( $size );
+  border: $border-width solid $color
+}
+@mixin after-block() {
+  content: '';
+  display: block;
+}
+
+@mixin hoz-flip() {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+@mixin line-after($length, $align: left, $top: 0, $bottom: 0, $color: #000, $height: 4 ) {
+  &:after {
+    @include after-block();
+    border-bottom: #{$height}px solid $color;
+    width: $length;
+    @if ($align == 'center') {
+      margin: 0 auto;
+    }
+    padding-top: $top;
+    margin-bottom: $bottom;
+  }
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate(#{$deg}deg);
+  -moz-transform: rotate(#{$deg}deg);
+  -o-transform: rotate(#{$deg}deg);
+  -ms-transform: rotate(#{$deg}deg);
+}
+
+// =====================================================
+// Centering
+// =====================================================
+
+// ! Cannot be floated
+@mixin vertical-align-container() {
+  display: table;
+  width: 100%;
+}
+
+
+@mixin vertical-align-cell() {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.vertical-align-container {
+  @include vertical-align-container;
+}
+.vertical-align {
+  @include vertical-align-cell;
+}
+
+// Offset not possible
+// Supported by i9+
+// Use can do it with inline-block and not with position absolute
+@mixin vertical-align($offset: 0) {
+  position: absolute;
+  margin-top: #{$offset}px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin abVerticalCenter($height) {
+  position: absolute;
+  top: 50%;
+  margin-top: -#{($height / 2)}px;
+}
+
+@mixin abHzCenter($width) {
+  position: absolute;
+  left: 50%;
+  margin-left: -#{($width / 2)}px;
+}
+
+@mixin ghostVerticalAlign() {
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: .1px;
+  }
+}
+
+.ghostVerticalAlign {
+  @include ghostVerticalAlign;
+}
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  @include transform (translate(-50%, -50%));
+}
+
+.centerer {
+  @include centerer;
+}
+
+@mixin coverer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.col-centered {
+  @include break-sm-min {
+    display: inline-block;
+  }
+  float: none;
+  /* reset the text-align */
+  text-align: left;
+  /* inline-block space fix */
+  margin-right: -4px;
+  vertical-align: top;
+}
+
+@mixin full-screen-modal {
+  background: rgba( 0,0,0,.8);
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
+
+// Turns VC from float to inline
+@mixin vc-inline() {
+
+  .wpb_column {
+    width: 100%;
+  }
+
+  .sect .vc_editor .vc_element,
+  .sect .wpb_column {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    margin-left: -3px;
+    margin-right: -3px;
+  }
+}
+
+// =====================================================
+// Animations
+//
+// Usage: transition( 'margin-top 0.2' ), transition( 0.2 )
+// =====================================================
+
+//@mixin transition( $time, $delay:0 ){
+//    // transform: rotate(0.1deg);
+//    -o-transition: #{$time}s;
+//    -ms-transition: #{$time}s;
+//    -moz-transition: #{$time}s;
+//    -webkit-transition: #{$time}s;
+//    transition: #{$time}s;
+//    transition-delay: #{$delay}s;
+//  }
+
+// =====================================================
+// Text
+// =====================================================
+
+@mixin headings {
+  h1, h2, h3,
+  h4, h5, h6 {
+    @content;
+  }
+}
+
+@mixin text-inherit() {
+  & h1, & h2, & h3, & h4, & h5, & h6, & p, & li {
+    color: inherit;
+  }
+}
+
+@mixin text {
+  & h1, & h2, & h3, & h4, & h5, & h6, & p, & li {
+    @content;
+  }
+}

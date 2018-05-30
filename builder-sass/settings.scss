@@ -1,0 +1,12 @@
+// ------------------------
+// Settings
+// ------------------------
+
+$background-color: #f9f9f9;
+$border-color: #c5c5c5;
+$font-color-2: #444;
+$theme-color: #009EC6;
+
+@mixin builder-border {
+  border: 1px solid $border-color;
+}

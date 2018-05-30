@@ -1,0 +1,52 @@
+/* ------------------------ */
+/*   Shortcode Editor
+/* ------------------------ */
+
+.zbx-atts-form-wrap {
+  width: 600px;
+  margin: 40px auto;
+  font-weight: 100;
+  background-color: #fff;
+  @include clearfix;
+
+  .field-wrap-info {
+    padding: 15px 20px;
+    background-color: #f5f5f5;
+  }
+  
+  form {
+    @include clearfix;
+  }
+
+  .content {
+    padding: 10px 40px;
+    @include clearfix;
+  }
+  .intro {
+    padding: 10px 30px 10px;
+    background: #f0f0f0;
+    background-color: $theme-color;
+    color: #fff;
+    margin: 0;
+    h1 {
+      color: inherit;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .desc {
+    padding: 20px 30px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  label {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 0;
+    display: block;
+  }
+}
+
